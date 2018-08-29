@@ -2,3 +2,7 @@ html {
   background-color: green;
   color: whitesmoke;
 }
+
+body {
+  font-family: sans-serif;
+}
