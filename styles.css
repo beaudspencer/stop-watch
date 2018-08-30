@@ -7,8 +7,10 @@ body {
 }
 
 div.style {
+  transform: rotate(45-deg);
   margin: 1rem auto;
   padding: 4rem 4rem;
+  height: 4rem;
   width: 4rem;
   border-radius: 50%;
   border: 0.5rem;
@@ -16,12 +18,64 @@ div.style {
   border-style: solid;
 }
 
+div.stop {
+  transform: rotate(45-deg);
+  margin: 1rem auto;
+  padding: 4rem 4rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: 0.5rem;
+  border-style: solid;
+  animation: 1s blink;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-color: rgb(255, 0, 0);
+}
+
+div.stylerun {
+  transform: rotate(45deg);
+  margin: 1rem auto;
+  padding: 4rem 4rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: 0.5rem;
+  background-color:rgb(73, 197, 254);
+  border-style: solid;
+  animation: 60s infinite countdown;
+}
+
+@keyframes countdown {
+  25% {
+    border-top-color: antiquewhite;
+  }
+  50% {
+    border-top-color: antiquewhite;
+    border-right-color: antiquewhite;
+  }
+  75% {
+    border-top-color: antiquewhite;
+    border-right-color: antiquewhite;
+    border-bottom-color: antiquewhite;
+  }
+  100% {
+    border-top-color: antiquewhite;
+    border-right-color: antiquewhite;
+    border-bottom-color: antiquewhite;
+    border-left-color: antiquewhite;
+  }
+}
+
 h2 {
   font-weight: 900;
   font-size: 4rem;
-  color: rgb(52, 52, 52);
   margin: 0 auto;
   width: fit-content;
+}
+
+.stylerun h2 {
+  transform: rotate(-45deg);
 }
 
 button {
