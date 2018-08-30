@@ -1,6 +1,7 @@
 var $stopStartButton = document.getElementById('ssbutton')
 var $elapsed = document.getElementById('elapsedtime')
 var $resetButton = document.getElementById('reset')
+var $timerInput = document.getElementById('timerinput')
 var timerID
 
 function timer(){
@@ -11,6 +12,12 @@ function timer(){
     $stopStartButton.textContent = 'Stop'
     timerID = setInterval(function() {
       $elapsed.textContent++
+      if($timerInput.value !== 0 && $timerInput.value !== ''){
+        if($elapsed.textContent === $timerInput.value){
+          $elapsed.classList.add('stop')
+          clearInterval(timerID)
+        }
+      }
     }, 1000)
   }
   else {
@@ -28,6 +35,7 @@ function reseter() {
   $stopStartButton.classList.add('start')
   $stopStartButton.textContent = 'Start'
   $resetButton.classList.add('hidden')
+  $elapsed.classList.remove('stop')
 }
 
 $stopStartButton.addEventListener('click', timer)
