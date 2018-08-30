@@ -23,14 +23,17 @@ button {
   border: 0;
   width: 8rem;
   height: 2rem;
-  background-color: red;
-  color: lightgray;
+  background-color: rgb(108, 209, 200);
+  color: black;
   font-size: 1.5rem;
+}
+
+button.stop {
+  background-color: red;
 }
 
 button:hover {
   background-color: yellow;
-  color: black;
   cursor: pointer;
 }
 
