@@ -19,6 +19,7 @@ div.style {
 h2 {
   font-weight: 900;
   font-size: 4rem;
+  color: rgb(52, 52, 52);
   margin: 0 auto;
   width: fit-content;
 }
@@ -30,6 +31,7 @@ button {
   height: 2rem;
   color: black;
   font-size: 1.5rem;
+  background: rgb(14, 255, 14);
 }
 
 .stop {
@@ -63,5 +65,9 @@ button:active {
 
 input {
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
+}
+
+div span {
+  font-size: 1.5rem;
 }
