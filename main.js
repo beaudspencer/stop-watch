@@ -12,6 +12,11 @@ function timer(){
     $stopStartButton.textContent = 'Stop'
     timerID = setInterval(function() {
       $elapsed.textContent++
+      if($timerInput.value !== 0 && $timerInput.value !== ''){
+        if($elapsed.textContent === $timerInput.value){
+          clearInterval(timerID)
+        }
+      }
     }, 1000)
   }
   else {
