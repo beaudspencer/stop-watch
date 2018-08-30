@@ -8,7 +8,7 @@ body {
   font-family: sans-serif;
 }
 
-#elapsedtime {
+h2 {
   font-weight: 900;
   font-size: 4rem;
   margin: 2rem auto;
@@ -28,7 +28,7 @@ button {
   font-size: 1.5rem;
 }
 
-button.stop {
+.stop {
   background-color: rgb(221, 78, 78);
 }
 button.hidden {
@@ -47,4 +47,5 @@ button:active {
 
 input {
   margin-top: 1rem;
+  font-size: 1rem;
 }

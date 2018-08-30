@@ -14,6 +14,7 @@ function timer(){
       $elapsed.textContent++
       if($timerInput.value !== 0 && $timerInput.value !== ''){
         if($elapsed.textContent === $timerInput.value){
+          $elapsed.classList.add('stop')
           clearInterval(timerID)
         }
       }
@@ -34,6 +35,7 @@ function reseter() {
   $stopStartButton.classList.add('start')
   $stopStartButton.textContent = 'Start'
   $resetButton.classList.add('hidden')
+  $elapsed.classList.remove('stop')
 }
 
 $stopStartButton.addEventListener('click', timer)
