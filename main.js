@@ -8,6 +8,7 @@ function swapState() {
 }
 function timer(){
   if($stopStartButton.classList.contains('start')){
+    $resetButton.classList.remove('hidden')
     $stopStartButton.classList.remove('start')
     $stopStartButton.classList.add('stop')
     $stopStartButton.textContent = 'Stop'
@@ -29,6 +30,7 @@ function reseter() {
   $stopStartButton.classList.remove('stop')
   $stopStartButton.classList.add('start')
   $stopStartButton.textContent = 'Start'
+  $resetButton.classList.add('hidden')
 }
 
 $stopStartButton.addEventListener('click', timer)
