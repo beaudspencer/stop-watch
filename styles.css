@@ -18,23 +18,26 @@ body {
   background-color: rgb(164, 169, 111);
 }
 
-#start {
+button {
   border-style: none;
   border: 0;
   width: 8rem;
   height: 2rem;
-  background-color: red;
-  color: lightgray;
+  background-color: rgb(108, 209, 200);
+  color: black;
   font-size: 1.5rem;
 }
 
-#start:hover {
-  background-color: yellow;
-  color: black;
+button.stop {
+  background-color: rgb(221, 78, 78);
+}
+
+button:hover {
+  background-color: rgb(246, 247, 137);
   cursor: pointer;
 }
 
-#start:active {
+button:active {
   background-color: rgb(0, 194, 0);
   color: whitesmoke;
 }
