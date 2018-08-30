@@ -44,3 +44,7 @@ button:active {
   background-color: rgb(0, 194, 0);
   color: whitesmoke;
 }
+
+input {
+  margin-top: 1rem;
+}

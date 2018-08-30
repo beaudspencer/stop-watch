@@ -1,6 +1,7 @@
 var $stopStartButton = document.getElementById('ssbutton')
 var $elapsed = document.getElementById('elapsedtime')
 var $resetButton = document.getElementById('reset')
+var $timerInput = document.getElementById('timerinput')
 var timerID
 
 function timer(){
