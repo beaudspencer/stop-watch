@@ -1,7 +1,11 @@
 var $stopStartButton = document.getElementById('ssbutton')
 var $elapsed = document.getElementById('elapsedtime')
+var $resetButton = document.getElementById('reset')
 var timerID
 
+function swapState() {
+
+}
 function timer(){
   if($stopStartButton.classList.contains('start')){
     $stopStartButton.classList.remove('start')
@@ -19,4 +23,13 @@ function timer(){
   }
 }
 
+function reseter() {
+  clearInterval(timerID)
+  $elapsed.textContent = '0'
+  $stopStartButton.classList.remove('stop')
+  $stopStartButton.classList.add('start')
+  $stopStartButton.textContent = 'Start'
+}
+
 $stopStartButton.addEventListener('click', timer)
+$resetButton.addEventListener('click', reseter)
