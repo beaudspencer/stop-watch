@@ -15,6 +15,7 @@ function timer(){
     $button.classList.remove('stop')
     $button.classList.add('start')
     $button.textContent = 'Start'
+    clearInterval(timerID)
   }
 }
 
