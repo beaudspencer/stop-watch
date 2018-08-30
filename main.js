@@ -1,4 +1,4 @@
-var $stopStartButton = document.getElementById('button')
+var $stopStartButton = document.getElementById('ssbutton')
 var $elapsed = document.getElementById('elapsedtime')
 var timerID
 
