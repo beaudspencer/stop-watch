@@ -6,11 +6,12 @@ body {
   font-family: sans-serif;
 }
 
-.style {
+div.style {
   margin: 1rem auto;
   padding: 4rem 4rem;
   width: 4rem;
   border-radius: 50%;
+  border: 0.5rem;
   background-color:rgb(73, 197, 254);
   border-style: solid;
 }
@@ -32,14 +33,28 @@ button {
 }
 
 .stop {
+  animation: 1s blink;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
   background-color: rgb(255, 0, 0);
 }
+
+@keyframes blink {
+  from {
+    background-color: red;
+  }
+  to {
+    background:yellow;
+  }
+}
+
 button.hidden {
   display: none;
 }
 
 button:hover {
   cursor: pointer;
+  background-color: yellow;
 }
 
 button:active {
