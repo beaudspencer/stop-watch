@@ -3,9 +3,6 @@ var $elapsed = document.getElementById('elapsedtime')
 var $resetButton = document.getElementById('reset')
 var timerID
 
-function swapState() {
-
-}
 function timer(){
   if($stopStartButton.classList.contains('start')){
     $resetButton.classList.remove('hidden')
