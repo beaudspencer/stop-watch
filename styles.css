@@ -1,6 +1,6 @@
 html {
-  background-color: grey;
-  color: whitesmoke;
+  background-color: rgb(44, 127, 62);
+  color: rgb(246, 247, 137);
   text-align: center;
 }
 
@@ -19,7 +19,7 @@ h1 {
   width: fit-content;
   padding: 1rem;
   border-radius: 1rem;
-  background-color: burlywood;
+  background-color: rgb(164, 169, 111);
 }
 
 #start {
