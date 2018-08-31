@@ -11,11 +11,10 @@ function timer(){
     $stopStartButton.classList.remove('start')
     $stopStartButton.classList.add('stop')
     $stopStartButton.textContent = 'Stop'
-    $timerBackground.classList.add('stylerun')
-    $timerBackground.classList.remove('style')
     $timerBackground.style.animationPlayState = 'running'
     timerID = setInterval(function() {
       $elapsed.textContent++
+      $timerBackground.style.transform = ('rotate(' + ($elapsed.textContent * 6) + 'deg)')
       if($timerInput.value !== 0 && $timerInput.value !== ''){
         if($elapsed.textContent === $timerInput.value){
           $timerBackground.classList.add('stop')
@@ -43,7 +42,7 @@ function reseter() {
   $resetButton.classList.add('hidden')
   $timerBackground.classList.remove('stop')
   $timerBackground.classList.add('style')
-  $timerBackground.classList.remove('stylerun')
+  $timerBackground.style.transform = 'rotate(0deg)'
 }
 
 $stopStartButton.addEventListener('click', timer)
