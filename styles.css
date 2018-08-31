@@ -40,7 +40,6 @@ div.stylerun {
   border: 0.5rem;
   background-color:rgb(73, 197, 254);
   border-style: solid;
-  border-top-color: antiquewhite;
   animation: 60s infinite linear countdown;
 }
 

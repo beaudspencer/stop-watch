@@ -13,6 +13,7 @@ function timer(){
     $stopStartButton.textContent = 'Stop'
     $timerBackground.classList.add('stylerun')
     $timerBackground.classList.remove('style')
+    $timerBackground.style.animationPlayState = 'running'
     timerID = setInterval(function() {
       $elapsed.textContent++
       if($timerInput.value !== 0 && $timerInput.value !== ''){
@@ -28,6 +29,7 @@ function timer(){
     $stopStartButton.classList.remove('stop')
     $stopStartButton.classList.add('start')
     $stopStartButton.textContent = 'Start'
+    $timerBackground.style.animationPlayState = 'paused'
     clearInterval(timerID)
   }
 }
