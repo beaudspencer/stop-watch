@@ -6,7 +6,9 @@ body {
   font-family: sans-serif;
 }
 
-div.style {
+.style,
+div.stop,
+.stylerun {
   margin: 1rem auto;
   padding: 3rem 3rem;
   height: 6rem;
@@ -18,26 +20,11 @@ div.style {
 }
 
 div.stop {
-  margin: 1rem auto;
-  padding: 3rem 3rem;
-  height: 6rem;
-  width: 6rem;
-  border-radius: 50%;
-  border: 0.5rem;
-  border-style: solid;
-  animation: 1s blink;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  animation: 1s infinite alternate blink;
   background-color: rgb(255, 0, 0);
 }
 
 div.stylerun {
-  margin: 1rem auto;
-  padding: 3rem 3rem;
-  height: 6rem;
-  width: 6rem;
-  border-radius: 50%;
-  border: 0.5rem;
   background-color:rgb(73, 197, 254);
   border-style: solid;
   animation: 60s infinite linear countdown;
