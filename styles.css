@@ -1,6 +1,4 @@
 html {
-  background-color: rgb(44, 127, 62);
-  color: rgb(246, 247, 137);
   text-align: center;
 }
 
@@ -8,44 +6,103 @@ body {
   font-family: sans-serif;
 }
 
+.style,
+div.stop,
+.stylerun {
+  margin: 1rem auto;
+  padding: 3rem 3rem;
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  border: 0.5rem;
+  background-color:rgb(73, 197, 254);
+  border-style: solid;
+}
+
+div.stop {
+  animation: 1s infinite alternate blink;
+  background-color: rgb(255, 0, 0);
+}
+
+div.stylerun {
+  background-color:rgb(73, 197, 254);
+  border-style: solid;
+  animation: 60s infinite linear countdown;
+}
+
+div.current {
+  background-color: antiquewhite;
+  z-index: 1;
+  position: relative;
+  margin: 0 auto;
+  bottom: 4rem;
+  height: 1rem;
+  width: 1rem;
+}
+@keyframes countdown {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+
 h2 {
+  position: relative;
   font-weight: 900;
   font-size: 4rem;
-  margin: 2rem auto;
-  width: fit-content;
-  padding: 1rem;
-  border-radius: 1rem;
-  background-color: rgb(164, 169, 111);
+  margin: 0 auto;
+  top : 10rem;
+  text-align: center;
+  z-index: 1;
 }
 
 button {
   border-style: none;
   border: 0;
+  margin-top: 4rem;
   width: 8rem;
   height: 2rem;
-  background-color: rgb(108, 209, 200);
   color: black;
   font-size: 1.5rem;
+  background: rgb(14, 255, 14);
 }
 
 .stop {
-  background-color: rgb(221, 78, 78);
+  animation: 1s blink;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-color: rgb(255, 0, 0);
 }
+
+@keyframes blink {
+  from {
+    background-color: red;
+  }
+  to {
+    background:yellow;
+  }
+}
+
 button.hidden {
   display: none;
 }
 
 button:hover {
-  background-color: rgb(246, 247, 137);
   cursor: pointer;
+  background-color: yellow;
 }
 
 button:active {
-  background-color: rgb(0, 194, 0);
   color: whitesmoke;
 }
 
 input {
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
+}
+
+div span {
+  font-size: 1.5rem;
 }
