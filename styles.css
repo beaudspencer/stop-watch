@@ -28,7 +28,13 @@ div.current {
   width: 1rem;
 }
 
-h2 {
+ol {
+  position: relative;
+  right: 1.25rem;
+  list-style: none;
+}
+
+h2#elapsedtime {
   position: relative;
   font-weight: 900;
   font-size: 4rem;
@@ -41,12 +47,21 @@ h2 {
 button {
   border-style: none;
   border: 0;
-  margin-top: 4rem;
   width: 8rem;
   height: 2rem;
   color: black;
   font-size: 1.5rem;
   background: rgb(14, 255, 14);
+}
+
+button#ssbutton,
+button#reset {
+  margin-top: 4rem;
+}
+
+button#lap {
+  margin-top: 1rem;
+  background-color: rgb(73, 197, 254);
 }
 
 .stop {
@@ -81,6 +96,7 @@ button:active {
 input {
   margin-top: 1rem;
   font-size: 1.25rem;
+  width: 4rem;
 }
 
 div span {
