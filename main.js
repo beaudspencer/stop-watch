@@ -3,6 +3,8 @@ var $timerBackground = document.getElementById('animebox')
 var $elapsed = document.getElementById('elapsedtime')
 var $resetButton = document.getElementById('reset')
 var $timerInput = document.getElementById('timerinput')
+var $lapButton = document.getElementById('lap')
+var $list = document.getElementById('lap-list')
 var timerID
 
 function timer(){
@@ -47,3 +49,12 @@ function reseter() {
 
 $stopStartButton.addEventListener('click', timer)
 $resetButton.addEventListener('click', reseter)
+$lapButton.addEventListener('click', function () {
+    if($stopStartButton.classList.contains('stop')){
+      var $lapTime = document.createElement('li')
+      $lapTime.textContent = $elapsed.textContent + ' seconds'
+      $list.appendChild($lapTime)
+      reseter()
+      timer()
+    }
+})
